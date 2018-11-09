@@ -31,9 +31,12 @@ export class DeskComponent implements OnInit {
   }
 
   onChangeValue(e) {
+    e.preventDefault()
     if (!isNaN(+e.data)) {
       console.log(+e.data)
       this.myValue = e.target.value
-    } else return
+    } else {
+      e.target.value=this.myValue
+    } 
   }
 }

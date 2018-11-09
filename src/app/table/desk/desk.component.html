@@ -2,18 +2,16 @@
     <div class='converter-select'>
       <span>from</span>
       <select name="from" id="from" (change)='onSelectFrom($event)'>
-        <!-- <option disabled>select</option> -->
         <option *ngFor='let rate of rates' value=`${rate.id}`>{{rate.id}}</option>
       </select>
       <span>to</span>
       <select name="from" id="from" (change)='onSelectTo($event)'>
-        <!-- <option disabled>select</option> -->
         <option *ngFor='let rate of rates' value=`${rate.id}`>{{rate.id}}</option>
       </select>
     </div>
     <label>
       enter value
-      <input type="text" [value]='myValue' (input)='onChangeValue($event)'>
+      <input type="text" [(value)]='myValue' (input)='onChangeValue($event)'>
     </label>
     <p>converted value: {{converted}}</p>
 </div>
