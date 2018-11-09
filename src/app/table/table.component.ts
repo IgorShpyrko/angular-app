@@ -24,7 +24,6 @@ export class TableComponent implements OnInit {
     this._getService.getRates()
       .subscribe(data => {
         this.rates = data['rates']
-        console.log(this.rates)
       })
   }
 }

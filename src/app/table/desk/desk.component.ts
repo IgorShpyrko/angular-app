@@ -12,11 +12,14 @@ export class DeskComponent implements OnInit {
   myValue: string = '';
   from: string = 'usd';
   to: string = 'usd';
+  converted: string;
+
+  @Input() rates: string;
 
   constructor() { }
   
   ngOnInit() {
-  
+
   }
 
   onSelectFrom(e) {
@@ -28,13 +31,9 @@ export class DeskComponent implements OnInit {
   }
 
   onChangeValue(e) {
-    if(e.data == '') {
-      console.log(e.data)
-      return
-    } else {
-      console.log('else')
+    if (!isNaN(+e.data)) {
+      console.log(+e.data)
       this.myValue = e.target.value
-    }
-    
+    } else return
   }
 }
