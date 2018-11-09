@@ -4,10 +4,10 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class GetRatesService {
 
   constructor(private _http: HttpClient) { }
-  getAll() {
-    return this._http.get('https://jsonplaceholder.typicode.com/users')
+  getRates() {
+    return this._http.get('https://my-json-server.typicode.com/IgorShpyrko/demo/db')
   }
 }

@@ -1,4 +1,10 @@
 <div class='wrapper'>
   <h3>Converter</h3>
+  <div class='rates'>
+    <div class='current-rate' *ngFor='let rate of rates'>
+      <span>{{rate.id}}</span>
+      <span>{{rate.value}}</span>
+    </div>
+  </div>
   <app-desk [users]='users'></app-desk>
 </div>
